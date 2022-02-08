@@ -14,7 +14,11 @@ class CacheServiceProvider  extends ServiceProvider
             for ($i = 0; $i < $num; $i++) {
                 //
             }
-            cache()->put('cache-debug', $num * 2);
+            $num = $num + 2;
+            cache()->put('cache-debug', $num);
+        }
+        if (request()->cookie('debug') === 'false'){
+            cache()->forget('cache-debug');
         }
     }
 }
