@@ -1,0 +1,27 @@
+{
+  "name": "zbxin/laravel-cache",
+  "description": "cache",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zbxin",
+      "email": "developer@zbxin.com"
+    }
+  ],
+  "require": {
+    "laravel/framework": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zbxin\\Cache\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Zbxin\\Cache\\CacheServiceProvider"
+      ]
+    }
+  }
+}
